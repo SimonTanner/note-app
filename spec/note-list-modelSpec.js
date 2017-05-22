@@ -44,12 +44,13 @@ function testThree() {
   console.log("Test 3: NoteList().showNotes returns all notes");
   try {
     var noteList = new NoteList();
-    var myText = "My not-so-private note"
+    var myText = "My not-so-private note";
     var note = new Note(myText);
     noteList.addNote(note);
-    noteList.showNotes();
-    if(noteList.showNotes() != noteList.notes) {
-      throw(err)
+    noteList.addNote(note);
+    var noteListTestArr = [note.text, note.text];
+    if (noteList.showNotes().join(" ") !== noteListTestArr.join(" ")) {
+      throw(err);
     }
     testPassed();
   } catch(err) {
