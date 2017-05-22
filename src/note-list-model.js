@@ -3,7 +3,12 @@ function NoteList() {
 }
 
 NoteList.prototype.addNote = function(note) {
-  this.notes.push(note);
+  if(note.constructor === Note) {
+    this.notes.push(note);
+  } else {
+    newNote = new Note(note);
+    this.notes.push(newNote)
+  }
 };
 
 NoteList.prototype.showNotes = function() {
@@ -13,4 +18,5 @@ NoteList.prototype.showNotes = function() {
   }
   return textList;
 };
+
 // module.exports = NoteList;
