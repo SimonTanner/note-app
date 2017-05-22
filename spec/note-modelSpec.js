@@ -1,4 +1,5 @@
 (function() {
+  console.log('note-model');
   testOne();
   testTwo();
   testThree();
@@ -51,7 +52,7 @@ function testThree() {
 function testFour() {
   console.log('Test 4: Note().print returns the stored text');
   try {
-    var myText = 'thing'
+    var myText = 'thing';
     var note = new Note(myText);
     note.print();
     if(note.print() !== myText) {
