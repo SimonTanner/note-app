@@ -1,3 +1,5 @@
-(function(){
-  console.log("hi");
-})();
+function Note() {
+  
+}
+
+// module.exports = Note;
