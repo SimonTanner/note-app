@@ -7,12 +7,11 @@ function NoteListView(noteList) {
 
 NoteListView.prototype.createHTML = function() {
   html = [];
-  for( i = 0; i < this.lists.length; i++) {
-    for (x = 0; x < this.lists[i].showNotes().length; x++) {
-      html.push('<li><div>' + this.lists[i].showNotes()[x] + '</div></li>');
-    }
-
-  }
+  this.lists.forEach(function(notelist) {
+    notelist.showNotes().forEach(function(list) {
+      html.push('<li><div>' + list + '</div></li>');
+    });
+  });
   return html;
 };
 
