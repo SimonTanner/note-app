@@ -3,6 +3,7 @@
   testOne();
   testTwo();
   testThree();
+  testFour();
 })();
 
 function testFail(error) {
@@ -50,6 +51,21 @@ function testThree() {
     noteList.addNote('Bye');
     noteListView.createHTML();
     if(noteListView.showHTML() == "<ul><li><div>Hello</div></li><li><div>Bye</div></li></ul>") {
+      testPassed();
+    }else {
+      throw(err);
+    }
+  } catch(err) {
+    testFail(err);
+  }
+}
+
+function testFour() {
+  console.log("Test 4: can output to an html string if there are no notes");
+  try {
+    var noteListView = new NoteListView();
+    noteListView.createHTML();
+    if(noteListView.showHTML() == "<ul><li><div></div></li></ul>") {
       testPassed();
     }else {
       throw(err);
