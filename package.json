@@ -1,0 +1,22 @@
+{
+  "name": "danielcostea",
+  "version": "1.0.0",
+  "description": "noteapp",
+  "main": "note-model.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonTanner/note-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonTanner/note-app/issues"
+  },
+  "homepage": "https://github.com/SimonTanner/note-app#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
